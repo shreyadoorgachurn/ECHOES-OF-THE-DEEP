@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Posts | Echoes Of The Deep</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo">Echoes Of The Deep</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Marine.html">Marine Life & Environment</a></li>
+          <li><a href="About_us.html">About Us</a></li>
+          <li><a href="Get_involved.html">Get Involved</a></li>
+          <li><a href="News.html">News & Media</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="Join.html">Joining Us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Support.html">Support & Policies</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="social.html">Social Media</a></li>
+          <li><a href="posts.html" class="active">Posts</a></li>
+
+          <li><a href="#" id="search-icon" aria-label="Search"><i class="fas fa-search"></i></a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search pages..." />
+      </div>
+    </nav>
+  </header>
+
+
+  <main id="main" class="section">
+    <div class="container">
+      <!-- Centered single heading -->
+      <h1 class="page-title">List of Posts</h1>
+
+      <!-- Posts grid -->
+      <div class="post-row mt-4">
+        <article class="card post">
+          <img class="card__media" src="image/index/marine_protected.jpeg" alt="Protected blue ocean waters"
+            loading="lazy">
+          <div class="card__body">
+            <h3>New Marine Protected Areas Established</h3>
+            <p>Three new protected zones established in the Pacific.</p>
+            <a class="btn btn--primary" href="post1.html">Read more</a>
+          </div>
+        </article>
+
+        <article class="card post">
+          <img class="card__media" src="image/index/coral_restoration.jpeg"
+            alt="Coral restoration structures under water" loading="lazy">
+          <div class="card__body">
+            <h3>Coral Reef Restoration Success</h3>
+            <p>Significant recovery across pilot reef sites.</p>
+            <a class="btn btn--primary" href="post2.html">Read more</a>
+          </div>
+        </article>
+
+        <article class="card post">
+          <img class="card__media" src="image/index/ocean_cleanup.jpeg" alt="Ocean cleanup concept with plastic waste"
+            loading="lazy">
+          <div class="card__body">
+            <h3>Global Ocean Cleanup Initiative</h3>
+            <p>Join efforts to remove plastic waste worldwide.</p>
+            <a class="btn btn--primary" href="post3.html">Read more</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+    <footer>
+        <p>Copyright &copy; 2025 Echoes Of The Deep</p>
+    </footer>
+  <!-- Search behavior -->
+  <script>
+    const searchIcon = document.getElementById('search-icon');
+    const searchContainer = document.querySelector('.search-container');
+    const searchBar = document.getElementById('search-bar');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+
+    // Show or hide search bar
+    searchIcon.addEventListener('click', function (event) {
+      event.preventDefault();
+      searchContainer.classList.toggle('active');
+      searchBar.value = "";
+      navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      searchBar.focus();
+    });
+
+    // Filter links dynamically
+    searchBar.addEventListener('keyup', function () {
+      const filter = searchBar.value.toLowerCase();
+      navLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          link.parentElement.style.display = "inline-block";
+        } else {
+          link.parentElement.style.display = "none";
+        }
+      });
+    });
+
+    // Hide search on ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Escape" && searchContainer.classList.contains('active')) {
+        searchContainer.classList.remove('active');
+        navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      }
+    });
+  </script>
+</body>
+
+</html>

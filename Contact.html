@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Echoes Of The Deep</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo">Echoes Of The Deep</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Marine.html">Marine Life & Environment</a></li>
+                    <li><a href="About_us.html">About Us</a></li>
+                    <li><a href="Get_involved.html">Get Involved</a></li>
+                    <li><a href="News.html">News & Media</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="join.html">Joining Us</a></li>
+                    <li><a href="Contact.html" class="active">Contact</a></li>
+                    <li><a href="Support.html">Support & Policies</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="social.html">Social Media</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+
+                    <li><a href="#" id="search-icon" aria-label="Search"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search pages..." />
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="contact-grid">
+
+            <div class="column-left">
+                <div class="card">
+                    <h3>Contact Us</h3>
+                    <form>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                        <button class="btn btn-blue">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Partnership & Collaboration</h3>
+                    <form>
+                        <label for="org-name">Organization Name</label>
+                        <input type="text" id="org-name" name="org-name" required>
+
+                        <label for="contact-person">Contact Person</label>
+                        <input type="text" id="contact-person" name="contact-person" required>
+
+                        <label for="partner-email">Email</label>
+                        <input type="email" id="partner-email" name="partner-email" required>
+
+                        <label for="partner-type">Partnership Type</label>
+                        <input type="text" id="partner-type" name="partner-type">
+
+                        <label for="partner-message">Message</label>
+                        <textarea id="partner-message" name="partner-message" rows="5"></textarea>
+
+                        <button class="btn btn-green">Submit Proposal</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="card">
+                    <h3>Our Location</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Mauritius</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+2301234567">+230 123 4567</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@company.com">contact@company.com</a>
+                    </div>
+                    <div class="map-placeholder">
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Newsletter Signup</h3>
+                    <p>Subscribe to our newsletter for updates and news.</p>
+                    <form>
+                        <label for="newsletter-email">Email Address</label>
+                        <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@email.com"
+                            required>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <label for="agree">I agree to receive marketing emails</label>
+                        </div>
+                        <button class="btn btn-purple">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h3>Contact Information</h3>
+                    <div class="info-group">
+                        <h4>Phone Numbers</h4>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+123456789">+123 456 789</a>
+                        </div>
+                    </div>
+                    <div class="info-group">
+                        <h4>Email Addresses</h4>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:support@company.com">support@company.com</a>
+                        </div>
+                    </div>
+                    <div class="info-group">
+                        <h4>Business Hours</h4>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Mon–Fri: 9AM – 5PM<br>Sat: 10AM – 2PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2025 Echoes Of The Deep</p>
+    </footer>
+
+    <script>
+        const searchIcon = document.getElementById('search-icon');
+        const searchContainer = document.querySelector('.search-container');
+        const searchBar = document.getElementById('search-bar');
+        const navLinks = document.querySelectorAll('.navbar ul li a');
+
+        // Show or hide search bar
+        searchIcon.addEventListener('click', function (event) {
+            event.preventDefault();
+            searchContainer.classList.toggle('active');
+            searchBar.value = "";
+            navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+            searchBar.focus();
+        });
+
+        // Filter links dynamically
+        searchBar.addEventListener('keyup', function () {
+            const filter = searchBar.value.toLowerCase();
+            navLinks.forEach(link => {
+                const text = link.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    link.parentElement.style.display = "inline-block";
+                } else {
+                    link.parentElement.style.display = "none";
+                }
+            });
+        });
+
+        // Hide search on ESC key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === "Escape" && searchContainer.classList.contains('active')) {
+                searchContainer.classList.remove('active');
+                navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

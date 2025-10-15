@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>New Marine Protected Areas Established | Echoes Of The Deep</title>
+  <link rel="stylesheet" href="style2.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo">Echoes Of The Deep</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Marine.html">Marine Life & Environment</a></li>
+          <li><a href="About_us.html">About Us</a></li>
+          <li><a href="Get_involved.html">Get Involved</a></li>
+          <li><a href="News.html">News & Media</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="Join.html">Joining Us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Support.html">Support & Policies</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="social.html">Social Media</a></li>
+          <li><a href="posts.html" class="active">Posts</a></li>
+          <li><a href="#" id="search-icon" aria-label="Search"><i class="fas fa-search"></i></a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search pages..." />
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container narrow">
+
+      <!-- Centered title + date -->
+      <header class="post-page-header">
+        <h1 class="page-title">New Marine Protected Areas Established</h1>
+        <p class="post-meta">
+          <time datetime="2025-06-12">June 12, 2025</time> • Echoes Of The Deep
+        </p>
+      </header>
+
+      <!-- Beautiful breadcrumbs -->
+      <nav class="breadcrumbs pretty" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="posts.html">Posts</a></li>
+          <li aria-current="page">New Marine Protected Areas Established</li>
+        </ol>
+      </nav>
+
+      <!-- Hero image -->
+      <figure class="post-figure">
+        <img src="image/index/marine_protected.jpeg" alt="Protected blue ocean waters" loading="lazy">
+        <figcaption>Newly designated MPAs safeguard reefs, mangroves, and pelagic corridors.</figcaption>
+      </figure>
+
+      <!-- Content -->
+      <article class="post-body">
+        <p>
+          Three new Marine Protected Areas (MPAs) have been designated across priority habitats in the Pacific,
+          covering spawning reefs, mangrove nurseries, and major migratory highways. The new status restricts
+          destructive extraction while allowing low-impact activities that sustain local livelihoods. Together,
+          these MPAs form an ecological network designed to boost biodiversity, rebuild fish stocks, and improve
+          coastal resilience to climate-driven storms.
+        </p>
+        <p>
+          Our team will support co-management with communities through ranger trainings, participatory mapping,
+          and long-term monitoring using acoustic sensors and reef health surveys. Over the next 12 months we will
+          publish quarterly updates on compliance, habitat recovery, and socio-economic benefits, ensuring the MPAs
+          deliver measurable conservation outcomes that people can see and feel.
+        </p>
+
+        <p class="mt-4">
+          <a class="btn btn--light" href="posts.html">← Back to Posts</a>
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-container single">
+      <div class="footer-bottom">© 2025 Echoes Of The Deep. All rights reserved.</div>
+    </div>
+  </footer>
+
+
+  <!-- Search behavior -->
+  <script>
+    const searchIcon = document.getElementById('search-icon');
+    const searchContainer = document.querySelector('.search-container');
+    const searchBar = document.getElementById('search-bar');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+
+    // Show or hide search bar
+    searchIcon.addEventListener('click', function (event) {
+      event.preventDefault();
+      searchContainer.classList.toggle('active');
+      searchBar.value = "";
+      navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      searchBar.focus();
+    });
+
+    // Filter links dynamically
+    searchBar.addEventListener('keyup', function () {
+      const filter = searchBar.value.toLowerCase();
+      navLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          link.parentElement.style.display = "inline-block";
+        } else {
+          link.parentElement.style.display = "none";
+        }
+      });
+    });
+
+    // Hide search on ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Escape" && searchContainer.classList.contains('active')) {
+        searchContainer.classList.remove('active');
+        navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      }
+    });
+  </script>
+</body>
+</html>

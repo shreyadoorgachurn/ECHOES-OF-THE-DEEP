@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joining Us | Echoes Of The Deep</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="navbar">
+      <h2 class="logo">Echoes Of The Deep</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Marine.html">Marine Life & Environment</a></li>
+          <li><a href="About_us.html">About Us</a></li>
+          <li><a href="Get_involved.html">Get Involved</a></li>
+          <li><a href="News.html">News & Media</a></li>
+          <li><a href="Portfolio.html">Portfolio</a></li>
+          <li><a href="Resources.html">Resources</a></li>
+          <li><a href="join.html" class="active">Joining Us</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+          <li><a href="Support.html">Support & Policies</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="social.html">Social Media</a></li>
+          <li><a href="posts.html">Posts</a></li>
+
+          <li><a href="#" id="search-icon" aria-label="Search"><i class="fas fa-search"></i></a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search pages..." />
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h1>Join Our Team</h1>
+      <p class="sub">Fill out the application form below to become a member</p>
+
+      <form action="#" method="post" class="form-grid">
+        <!-- Row 1 -->
+        <div class="field">
+          <label class="label"><span class="icon">👤</span> Full Name</label>
+          <input class="input" type="text" name="fullname" placeholder="Enter your full name" required />
+        </div>
+        <div class="field">
+          <label class="label"><span class="icon">📅</span> Age</label>
+          <input class="input" type="number" name="age" min="0" placeholder="" />
+        </div>
+
+        <!-- Row 2 -->
+        <div class="field">
+          <label class="label"><span class="icon">✉️</span> Email Address</label>
+          <input class="input" type="email" name="email" placeholder="Enter your email" required />
+        </div>
+        <div class="field">
+          <label class="label"><span class="icon">📞</span> Phone Number</label>
+          <input class="input" type="tel" name="phone" placeholder="" />
+        </div>
+
+        <!-- Row 3 -->
+        <div class="field">
+          <label class="label"><span class="icon">♂️</span> Gender</label>
+          <select class="select" name="gender">
+            <option value="">Select gender</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Non-binary</option>
+            <option>Prefer not to say</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="label"><span class="icon">💼</span> Experience (Years)</label>
+          <input class="input" type="number" name="experience" min="0" step="0.5" placeholder="" />
+        </div>
+
+        <!-- Row 4 (full width) -->
+        <div class="field full">
+          <label class="label"><span class="icon">❓</span> Why Do You Want to Join?</label>
+          <textarea class="textarea" name="why" placeholder=""></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="actions full">
+          <button type="submit" class="btn-submit">Submit Application</button>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" rel="noopener">
+            <i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">
+            <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Echoes of the Deep. All rights reserved.
+    </div>
+  </footer>
+  <script>
+    const searchIcon = document.getElementById('search-icon');
+    const searchContainer = document.querySelector('.search-container');
+    const searchBar = document.getElementById('search-bar');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+
+    // Show or hide search bar
+    searchIcon.addEventListener('click', function (event) {
+      event.preventDefault();
+      searchContainer.classList.toggle('active');
+      searchBar.value = "";
+      navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      searchBar.focus();
+    });
+
+    // Filter links dynamically
+    searchBar.addEventListener('keyup', function () {
+      const filter = searchBar.value.toLowerCase();
+      navLinks.forEach(link => {
+        const text = link.textContent.toLowerCase();
+        if (text.includes(filter)) {
+          link.parentElement.style.display = "inline-block";
+        } else {
+          link.parentElement.style.display = "none";
+        }
+      });
+    });
+
+    // Hide search on ESC key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "Escape" && searchContainer.classList.contains('active')) {
+        searchContainer.classList.remove('active');
+        navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+      }
+    });
+  </script>
+</body>
+
+</html>

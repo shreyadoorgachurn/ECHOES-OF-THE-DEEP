@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Echoes Of The Deep</title>
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <h2 class="logo">Echoes Of The Deep</h2>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Marine.html" class="active">Marine Life & Environment</a></li>
+                    <li><a href="About_us.html">About Us</a></li>
+                    <li><a href="Get_involved.html">Get Involved</a></li>
+                    <li><a href="News.html">News & Media</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="Join.html">Joining Us</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                    <li><a href="Support.html">Support & Policies</a></li>
+                    <li><a href="Events.html">Events</a></li>
+                    <li><a href="social.html">Social Media</a></li>
+                    <li><a href="posts.html">Posts</a></li>
+
+                    <li><a href="#" id="search-icon" aria-label="Search"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search pages..." />
+            </div>
+        </nav>
+    </header>
+
+  <!-- Marine Animals Gallery -->
+  <section id="gallery" class="section section-soft">
+    <div class="container">
+      <h2 class="section__title center">Marine Animals Gallery</h2>
+
+      <div class="gallery grid grid--gallery mt-4">
+        <!-- Whales & Dolphins -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/dolphins.jpeg" alt="Whales and dolphins swimming underwater">
+          <div class="tile__body">
+            <h3 class="tile__title">Whales &amp; Dolphins</h3>
+            <p class="tile__text">Explore the majestic world of cetaceans, from tiny dolphins to giant whales.</p>
+          </div>
+        </article>
+
+        <!-- Sea Turtles -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/seaTurtles.jpeg" alt="Sea turtles gliding through clear water">
+          <div class="tile__body">
+            <h3 class="tile__title">Sea Turtles</h3>
+            <p class="tile__text">Discover ancient mariners that have been navigating oceans for millions of years.</p>
+          </div>
+        </article>
+
+        <!-- Sharks & Rays -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/shark.jpeg" alt="Shark cruising over the reef">
+          <div class="tile__body">
+            <h3 class="tile__title">Sharks &amp; Rays</h3>
+            <p class="tile__text">Learn about these fascinating cartilaginous fish and their crucial ocean roles.</p>
+          </div>
+        </article>
+
+        <!-- Coral Reefs & Reef Fish -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/coral.jpeg" alt="Colorful coral reef with reef fish">
+          <div class="tile__body">
+            <h3 class="tile__title">Coral Reefs &amp; Reef Fish</h3>
+            <p class="tile__text">Dive into the colourful underwater cities teeming with biodiversity.</p>
+          </div>
+        </article>
+
+        <!-- Seabirds -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/seabirds.jpeg" alt="Seabird floating on the ocean surface">
+          <div class="tile__body">
+            <h3 class="tile__title">Seabirds</h3>
+            <p class="tile__text">Meet the remarkable birds that have adapted to life above and in the ocean.</p>
+          </div>
+        </article>
+
+        <!-- Seals & Penguins (no image yet → keep skeleton or add later) -->
+        <article class="tile">
+          <img class="tile__media" src="image/marineLife/penguin.jpeg" alt="Penguins swimming in the cold water"> 
+          <div class="tile__body">
+            <h3 class="tile__title">Seals &amp; Penguins</h3>
+            <p class="tile__text">Explore the lives of these charismatic marine mammals and flightless birds.</p>
+          </div>
+        </article>
+
+        <!-- Endangered Species (full-row feature) -->
+        <article class="tile span-2">
+          <img class="tile__media" src="image/marineLife/endangered.jpeg" alt="Endangered marine animal in open water">
+          <div class="tile__body">
+            <h3 class="tile__title">Endangered Species</h3>
+            <p class="tile__text">Learn about marine animals facing extinction and what we can do to help.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Threats to Ocean -->
+  <section id="threats" class="section">
+    <div class="container">
+      <h2 class="section__title center">Threats to Ocean</h2>
+
+      <div class="threats grid grid--threats mt-4">
+        <article class="info-card">
+          <h3>Overfishing</h3>
+          <p>Excessive fishing depletes fish populations faster than they can reproduce, disrupting marine ecosystems and food chains.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Coral Bleaching</h3>
+          <p>Rising ocean temperatures cause corals to expel their symbiotic algae, leading to widespread reef death.</p>
+        </article>
+
+        <!-- Larger card with subtitles + blank line -->
+        <article class="info-card info-card--tall">
+          <h3>Plastic Pollution</h3>
+
+          <h4 class="subhead">Microplastics</h4>
+          <p>Tiny plastic particles that contaminate marine food webs and enter the human food chain.</p>
+
+          <div class="subsep"></div>
+
+          <h4 class="subhead">Ghost Nets</h4>
+          <p>Abandoned fishing nets that continue trapping and killing marine life for decades.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Oil Spills &amp; Chemical Waste</h3>
+          <p>Toxic substances from industrial activities poison marine life and destroy coastal habitats.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Habitat Destruction by Sports Activities</h3>
+          <p>Reckless boating, anchoring on reefs, and other recreational activities damage fragile marine ecosystems.</p>
+        </article>
+
+        <article class="info-card">
+          <h3>Climate Change &amp; Ocean Warming</h3>
+          <p>Global warming alters ocean chemistry, raises sea levels, and threatens marine biodiversity through temperature changes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conservation Solutions -->
+<section id="solutions" class="section section-soft">
+  <div class="container">
+    <h2 class="section__title center">Conservation Solutions</h2>
+
+    <div class="solutions grid grid--solutions mt-4">
+      <!-- Protected Marine Areas -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/shield.png" alt="Protected areas icon">
+        <div class="pill-card__body">
+          <h3>Protected Marine Areas</h3>
+          <p>Establishing marine reserves to safeguard critical habitats and biodiversity hotspots.</p>
+        </div>
+      </article>
+
+      <!-- Rescue & Rehabilitation Centres -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/heart.png" alt="Animal care icon">
+        <div class="pill-card__body">
+          <h3>Rescue &amp; Rehabilitation Centres</h3>
+          <p>Facilities dedicated to saving injured marine animals and preparing them for release.</p>
+        </div>
+      </article>
+
+      <!-- Turtle Nest Protection Programs -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/paw.png" alt="Turtle nest protection icon">
+        <div class="pill-card__body">
+          <h3>Turtle Nest Protection Programs</h3>
+          <p>Initiatives to monitor and protect sea turtle nesting sites from predators and human interference.</p>
+        </div>
+      </article>
+
+      <!-- Coral Reefs Restoration -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/leaf.png" alt="Reef restoration icon">
+        <div class="pill-card__body">
+          <h3>Coral Reefs Restoration</h3>
+          <p>Scientific efforts to regrow damaged coral reefs and restore marine ecosystem health.</p>
+        </div>
+      </article>
+
+      <!-- Sustainable Fishing Awareness -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/fish.png" alt="Sustainable fishing icon">
+        <div class="pill-card__body">
+          <h3>Sustainable Fishing Awareness</h3>
+          <p>Educational campaigns promoting responsible fishing practices to preserve fish populations.</p>
+        </div>
+      </article>
+
+      <!-- Community Outreach Programs -->
+      <article class="pill-card">
+        <img class="pill-card__icon" src="image/marineLife/icon/people.png" alt="Community outreach icon">
+        <div class="pill-card__body">
+          <h3>Community Outreach Programs</h3>
+          <p>Engaging local communities in marine conservation efforts through education and participation.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+  <footer>
+    <div class="footer-container single">
+      <div class="footer-bottom">© 2025 Echoes Of The Deep. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const searchIcon = document.getElementById('search-icon');
+    const searchContainer = document.querySelector('.search-container');
+    const searchBar = document.getElementById('search-bar');
+    const navLinks = document.querySelectorAll('.navbar ul li a');
+
+    if (searchIcon && searchContainer && searchBar) {
+      // Show or hide search bar
+      searchIcon.addEventListener('click', function (event) {
+        event.preventDefault();
+        searchContainer.classList.toggle('active');
+        searchBar.value = "";
+        navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+        searchBar.focus();
+      });
+
+      // Filter links dynamically
+      searchBar.addEventListener('keyup', function () {
+        const filter = searchBar.value.toLowerCase();
+        navLinks.forEach(link => {
+          const text = link.textContent.toLowerCase();
+          if (text.includes(filter)) {
+            link.parentElement.style.display = "inline-block";
+          } else {
+            link.parentElement.style.display = "none";
+          }
+        });
+      });
+
+      // Hide search on ESC key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" && searchContainer.classList.contains('active')) {
+          searchContainer.classList.remove('active');
+          navLinks.forEach(link => link.parentElement.style.display = "inline-block");
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
